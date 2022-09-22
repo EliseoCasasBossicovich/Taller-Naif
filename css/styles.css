@@ -1,0 +1,46 @@
+.form {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 3.5em 1.5em; }
+  .form__contenedor {
+    background-color: white;
+    display: flex;
+    flex-direction: column; }
+  .form__imput {
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .8em 1em; }
+    .form__imput--label {
+      padding: 10px;
+      border: none; }
+  .form__btn {
+    margin-top: 20px;
+    background-color: cornflowerblue;
+    border: solid 2px cornflowerblue;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: .5em .7em; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/* header */
+/* Lista categorias */
+ul {
+  list-style: none; }
+
+/* body */
+body {
+  background-color: aquamarine; }
+
+a {
+  text-decoration: none;
+  color: white; }

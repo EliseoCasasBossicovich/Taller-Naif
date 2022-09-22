@@ -1,0 +1,21 @@
+@import "contacto.scss";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/* header */
+/* Lista categorias */
+ul{
+    list-style: none;
+}
+/* body */
+body{
+    background-color: aquamarine;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

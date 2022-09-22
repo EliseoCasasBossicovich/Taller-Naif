@@ -1,6 +1,6 @@
-const $form = document.querySelector("form");
+const $form = document.querySelector('#form');
 
-$form.addEventListener ("sumbit", handleSumbit);
+$form.addEventListener ('sumbit', handleSumbit);
 
 async function handleSumbit(event){
     event.preventDefault();
@@ -8,12 +8,12 @@ async function handleSumbit(event){
     const response = await fetch(this.action, {
         method: this.method,
         body: form,
-        header: {
-            "Accept": "application/json"
+        headers: {
+            'Accept': 'application/json'
         }
     })
     if (response.ok){
-        this.reset(); 
+        this.reset();
         alert ("Gracias por contactarnos, te escribiremos pronto.");
     }
 }
