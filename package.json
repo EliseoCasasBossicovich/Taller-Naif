@@ -4,7 +4,10 @@
   "description": "��#\u0000 \u0000T\u0000a\u0000l\u0000l\u0000e\u0000r\u0000-\u0000N\u0000a\u0000i\u0000f\u0000\r\u0000 \u0000",
   "main": "form.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
   },
   "repository": {
     "type": "git",
