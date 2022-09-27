@@ -1,9 +1,10 @@
+// FORMULARIO
 const formulario = document.getElementById("formulario");
 let article = document.createElement("article");
 article.innerHTML = `<form class="form" action="https://formspree.io/f/xyyvwkgr" method="POST">
                     <div class="form__contenedor">
                         <h2 class="form__contenedor">Contáctanos</h2>
-                        <label class="form__imput form__imput--label ">Nombre Completo*</label>
+                        <label for="Nombre" class="form__imput form__imput--label ">Nombre Completo*</label>
                         <input name="Nombre" required type="text" class="form__imput " id="nombre" placeholder="Juan Garcia">
                         <label for="Email" class="form__imput form__imput--label ">Correo electronico*</label>
                         <input name="Email" required type="email" class=" form__imput " id="email" placeholder="nombre@ejemplo.com">
@@ -14,10 +15,7 @@ article.innerHTML = `<form class="form" action="https://formspree.io/f/xyyvwkgr"
                     </form>`;              
 formulario.appendChild(article);
 
-
-
-
-const $form = document.getElementById('form');
+const $form = document.querySelector('#form');
 $form.addEventListener('sumbit', handleSumbit);
 
 async function handleSumbit(event){

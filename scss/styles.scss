@@ -1,4 +1,6 @@
+@import "operators.scss";
 @import "contacto.scss";
+@import "gridindex.scss";
 
 *{
     margin: 0px;
@@ -18,4 +20,9 @@ body{
 a{
     text-decoration: none;
     color: white;
+}
+img{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
 }

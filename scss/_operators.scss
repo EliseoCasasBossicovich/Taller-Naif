@@ -1,0 +1,6 @@
+// mixin
+@mixin grid ($size, $content, $items) {
+    background-size: $size;
+    justify-content: $content;
+    align-items: $items;
+}

@@ -27,6 +27,59 @@
     font-size: 20px;
     padding: .5em .7em; }
 
+.gridIndex {
+  display: grid;
+  margin-top: 0.938rem;
+  width: 99vw;
+  height: 60vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .gridIndex__boton {
+    width: 8.125rem;
+    height: 3.125rem;
+    border: 0.625rem;
+    border-radius: 0.938rem;
+    font-size: 1.2em;
+    color: white; }
+
+.integrantes {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../recursos/integrantes.jpg"); }
+
+.muestras {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../recursos/muestras.jpg"); }
+
+.historia {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../recursos/historia.jpg"); }
+
+.contactamos {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../recursos/contactanos.jpg"); }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -44,3 +97,8 @@ body {
 a {
   text-decoration: none;
   color: white; }
+
+img {
+  padding: 10px;
+  width: 100%;
+  height: 100%; }
