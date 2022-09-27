@@ -1,6 +1,8 @@
+@import "variables.scss";
 @import "operators.scss";
 @import "contacto.scss";
 @import "gridindex.scss";
+@import "footer.scss";
 
 *{
     margin: 0px;
@@ -13,9 +15,13 @@
 ul{
     list-style: none;
 }
+// header
+header{
+    background-color: $color-principal;
+}
 /* body */
 body{
-    background-color: aquamarine;
+
 }
 a{
     text-decoration: none;

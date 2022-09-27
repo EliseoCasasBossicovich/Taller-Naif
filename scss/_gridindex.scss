@@ -1,18 +1,35 @@
 @import "operators.scss";
+// GRID FRASE
+.fraceIndex{
+    height: 10vh;
+    padding: 35px;
+    display: flex;
+    &__frace {
+        text-align: center;
+    }
+
+}
+
+// GRID PAGINAS
 .gridIndex{
     display: grid;
-    margin-top: 0.938rem;
-    width: 99vw;
-    height: 60vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    width: auto;
+    height: 85vh;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 4fr 4fr;
+    
     &__boton{
         width: 8.125rem;
         height: 3.125rem;
         border: 0.625rem ;
+        background-color: $color-secundario;
+        border: $color-secundario  0.625rem ;
         border-radius: 0.938rem;
         font-size: 1.2em;
         color: white;
+        &:hover{
+            transform: scale(1.05, 1.05);
+        }
     }
 }
     .integrantes{
@@ -22,6 +39,7 @@
         grid-row-end:   2;
         display: flex;
         @include grid (cover, center, center);
+        background-position: top;
         background-image: url("../recursos/integrantes.jpg");
     }
     .muestras{
@@ -29,6 +47,7 @@
         grid-row: 1/2;
         display: flex;
         @include grid (cover, center, center);
+        background-position: center;
         background-image: url("../recursos/muestras.jpg");
     }
     .historia{
@@ -36,12 +55,14 @@
         grid-row: 2/3;
         display: flex;
         @include grid (cover, center, center);
+        background-position: center;
         background-image: url("../recursos/historia.jpg");
     }
-    .contactamos{
+    .contactanos{
         grid-column: 2/3;
         grid-row: 2/3;
         display: flex;
         @include grid (cover, center, center);
+        background-position: top;
         background-image: url("../recursos/contactanos.jpg");
     }

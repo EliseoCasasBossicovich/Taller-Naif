@@ -1,0 +1,14 @@
+.header{
+    background-color: $color-principal;
+    &__ul{
+                    &:hover{
+            transform: scale(1.05, 1.05);
+    }
+    
+    &__li{
+        padding-left: 20px;
+        padding-bottom: 0.75rem;
+        font-size: 1.2em;
+        }
+    }
+}

@@ -4,3 +4,14 @@
     justify-content: $content;
     align-items: $items;
 }
+// map
+$backcolor:(
+    footer:  $color-principal,
+    header:  $color-principal,
+);
+// each
+@each $name, $color in $backcolor {
+    .color-#{$name} {
+        background-color: #{$color};
+    }
+}

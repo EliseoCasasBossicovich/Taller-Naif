@@ -1,0 +1,45 @@
+
+    .footer{
+        &__contactanos{
+            display: grid;
+            grid-template-areas: "indice mapa redes"
+                                "indice mapa derechos";
+            padding: 1.688rem;
+            color: white;
+            background-color: $color-principal;
+        }
+        &__nav{
+            grid-area: indice;
+        }
+        &__nav ul li{
+            padding-left: 20px;
+            padding-bottom: 0.75rem;
+            font-size: 1.2em;
+            &:hover{
+                transform: scale(1.05, 1.05);
+            }
+        }
+        &__nav--logo{
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            &:hover{
+                transform: scale(1.05, 1.05);
+            }
+        }
+        &__visitanos{
+            grid-area: mapa;
+        }
+        &__redes{
+            grid-area: redes;
+            padding-top: 20px;
+        }
+        &__icono{
+            width: 4.063rem;
+            height: 4.063rem;
+        }
+        &__derechos{
+            grid-area: derechos;
+        }
+    }
+

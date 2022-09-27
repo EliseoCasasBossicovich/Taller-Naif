@@ -1,3 +1,9 @@
+.color-footer {
+  background-color: #b90440; }
+
+.color-header {
+  background-color: #b90440; }
+
 .form {
   background-color: white;
   width: 90%;
@@ -27,20 +33,36 @@
     font-size: 20px;
     padding: .5em .7em; }
 
+.color-footer {
+  background-color: #b90440; }
+
+.color-header {
+  background-color: #b90440; }
+
+.fraceIndex {
+  height: 10vh;
+  padding: 35px;
+  display: flex; }
+  .fraceIndex__frace {
+    text-align: center; }
+
 .gridIndex {
   display: grid;
-  margin-top: 0.938rem;
-  width: 99vw;
-  height: 60vh;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
+  width: auto;
+  height: 85vh;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: 4fr 4fr; }
   .gridIndex__boton {
     width: 8.125rem;
     height: 3.125rem;
     border: 0.625rem;
+    background-color: #b0305a;
+    border: #b0305a 0.625rem;
     border-radius: 0.938rem;
     font-size: 1.2em;
     color: white; }
+    .gridIndex__boton:hover {
+      transform: scale(1.05, 1.05); }
 
 .integrantes {
   grid-column-start: 1;
@@ -51,6 +73,7 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
+  background-position: top;
   background-image: url("../recursos/integrantes.jpg"); }
 
 .muestras {
@@ -60,6 +83,7 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-image: url("../recursos/muestras.jpg"); }
 
 .historia {
@@ -69,16 +93,56 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-image: url("../recursos/historia.jpg"); }
 
-.contactamos {
+.contactanos {
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
   background-size: cover;
   justify-content: center;
   align-items: center;
+  background-position: top;
   background-image: url("../recursos/contactanos.jpg"); }
+
+.footer__contactanos {
+  display: grid;
+  grid-template-areas: "indice mapa redes" "indice mapa derechos";
+  padding: 1.688rem;
+  color: white;
+  background-color: #b90440; }
+
+.footer__nav {
+  grid-area: indice; }
+
+.footer__nav ul li {
+  padding-left: 20px;
+  padding-bottom: 0.75rem;
+  font-size: 1.2em; }
+  .footer__nav ul li:hover {
+    transform: scale(1.05, 1.05); }
+
+.footer__nav--logo {
+  width: 200px;
+  display: flex;
+  flex-direction: column; }
+  .footer__nav--logo:hover {
+    transform: scale(1.05, 1.05); }
+
+.footer__visitanos {
+  grid-area: mapa; }
+
+.footer__redes {
+  grid-area: redes;
+  padding-top: 20px; }
+
+.footer__icono {
+  width: 4.063rem;
+  height: 4.063rem; }
+
+.footer__derechos {
+  grid-area: derechos; }
 
 * {
   margin: 0px;
@@ -90,10 +154,10 @@
 ul {
   list-style: none; }
 
-/* body */
-body {
-  background-color: aquamarine; }
+header {
+  background-color: #b90440; }
 
+/* body */
 a {
   text-decoration: none;
   color: white; }
