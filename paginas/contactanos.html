@@ -42,7 +42,41 @@
         </nav>
     </header>
     <main>
-    <section id="formulario">
+        <section>
+            <h1>Comunicate con nosotros</h1>
+        </section>
+    <section class="forms">
+        <article class="form1">
+            <form class="form" id="form" action="https://formspree.io/f/xyyvwkgr" method="POST">
+                <div class="form__contenedor">
+                    <h2 class="form__contenedor">Contáctanos</h2>
+                    <label for="Nombre" class="form__imput form__imput--label ">Nombre Completo*</label>
+                    <input name="Nombre" required type="text" class="form__imput " id="nombre" placeholder="Juan Garcia">
+                    <label for="Email" class="form__imput form__imput--label ">Correo electronico*</label>
+                    <input name="Email" required type="email" class=" form__imput " id="email" placeholder="nombre@ejemplo.com">
+                    <label for="Mensaje" class="form__imput form__imput--label">Mensaje</label>
+                    <textarea name="Mensaje" class=" form__imput form__imput--mensaje " id="Mensaje:"></textarea>
+                    <button type="submit" class="form__imput form__btn">Enviar</button>
+                </div>
+            </form>
+        </article>
+        <article class="form2">
+            <form class="form" id="reseña">
+                <div class="form__contenedor">
+                    <h2 class="form__contenedor">Dejanos un comentario</h2>
+                    <label for="Nombre" class="form__imput form__imput--label ">Nombre</label>
+                    <input name="Nombre" required type="text" class="form__imput " id="sujeto" placeholder="Juan Garcia">
+                    <label for="Opinion" class="form__imput form__imput--label">Comentario</label>
+                    <textarea name="Opinion" class=" form__imput form__imput--mensaje " id="comentario"></textarea>
+                    <button type="submit" class="form__imput form__btn">Enviar</button>
+                </div>
+            </form>
+        </article>
+        <article class="reseñas">
+            <button class="reseñas__btn" id="listaReseñas"> Reseñas </button>
+                <div id="datosReseña"></div>
+        </article>
+        
     </section>
     </main>
     <footer>

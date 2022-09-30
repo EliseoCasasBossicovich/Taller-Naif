@@ -1,20 +1,4 @@
 // FORMULARIO
-const formulario = document.getElementById("formulario");
-let article = document.createElement("article");
-article.innerHTML = `<form class="form" action="https://formspree.io/f/xyyvwkgr" method="POST">
-                    <div class="form__contenedor">
-                        <h2 class="form__contenedor">Contáctanos</h2>
-                        <label for="Nombre" class="form__imput form__imput--label ">Nombre Completo*</label>
-                        <input name="Nombre" required type="text" class="form__imput " id="nombre" placeholder="Juan Garcia">
-                        <label for="Email" class="form__imput form__imput--label ">Correo electronico*</label>
-                        <input name="Email" required type="email" class=" form__imput " id="email" placeholder="nombre@ejemplo.com">
-                        <label for="Mensaje" class="form__imput form__imput--label">Mensaje</label>
-                        <textarea name="Mensaje" class=" form__imput form__imput--mensaje " id="Mensaje:"></textarea>
-                        <button type="submit" class="form__imput form__btn">Enviar</button>
-                    </div>
-                    </form>`;              
-formulario.appendChild(article);
-
 const $form = document.querySelector('#form');
 $form.addEventListener('sumbit', handleSumbit);
 
@@ -32,4 +16,48 @@ async function handleSumbit(event){
         this.reset();
         alert ("Gracias por contactarnos, te escribiremos pronto.");
     }
+}
+
+// OPINION
+// reserva de datos enviados
+class Opinion {
+    constructor(nombre, mensaje){
+        this.nombre = nombre;
+        this.mensaje = mensaje;
+    }
+}
+// Array opiniones
+const arrayOpiniones = [];
+
+const idOpinion = document.getElementById("reseña");
+
+idOpinion.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    agregarReseña();
+})
+function agregarReseña(){
+    const nombre = document.getElementById("sujeto").value;
+    const mensaje = document.getElementById("comentario").value;
+    const nuevaReseña = new Opinion(nombre, mensaje);
+    arrayOpiniones.push(nuevaReseña);
+    localStorage.setItem(Opinion, JSON.stringify(arrayOpiniones)); 
+    idOpinion.reset();
+}
+const verReseña = document.getElementById("listaReseñas");
+const datosReseña = document.getElementById("datosReseña");
+verReseña.addEventListener("click", () =>{
+    mostrarReseñas();
+})
+
+function mostrarReseñas(){
+    datosReseña.innerHTML ="";
+    arrayOpiniones.forEach( opinion => {
+        const div = document.createElement("div");
+        div.innerHTML = `<div>
+                            <p> Nombre: ${opinion.nombre}</p>
+                            <p> Reseña: ${opinion.mensaje}</p>
+                        </div>
+                        `;
+        datosReseña.appendChild(div);
+    })
 }

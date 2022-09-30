@@ -20,3 +20,6 @@ gridIndex.innerHTML = ` <article class="integrantes">
                         <article class="contactanos">
                             <a href="paginas/contactanos.html"><button class="gridIndex__boton">Contáctanos</button></a>
                         </article>`;
+
+
+                        
