@@ -19,14 +19,6 @@
                 transform: scale(1.05, 1.05);
             }
         }
-        &__nav--logo{
-            width: 200px;
-            display: flex;
-            flex-direction: column;
-            &:hover{
-                transform: scale(1.05, 1.05);
-            }
-        }
         &__visitanos{
             grid-area: mapa;
         }

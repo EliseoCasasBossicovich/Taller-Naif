@@ -33,7 +33,7 @@ const idOpinion = document.getElementById("reseña");
 
 idOpinion.addEventListener("submit", (e) =>{
     e.preventDefault();
-    agregarReseña();
+    agregarReseña();   
 })
 function agregarReseña(){
     const nombre = document.getElementById("sujeto").value;
@@ -45,19 +45,17 @@ function agregarReseña(){
 }
 const verReseña = document.getElementById("listaReseñas");
 const datosReseña = document.getElementById("datosReseña");
+
 verReseña.addEventListener("click", () =>{
-    mostrarReseñas();
+    const nuevaReseña = JSON.parse(localStorage.getItem("Opinion"));
+    let aux ="";
+    nuevaReseña.forEach(opinion => {
+        aux += `<p class="reseña__inf"> Nombre: ${opinion.nombre}</p>
+                <p class="reseña__inf"> Reseña: ${opinion.mensaje}</p>
+                `;
+        
+    })
+    datosReseña.innerHTML = aux; 
 })
 
-function mostrarReseñas(){
-    datosReseña.innerHTML ="";
-    arrayOpiniones.forEach( opinion => {
-        const div = document.createElement("div");
-        div.innerHTML = `<div>
-                            <p> Nombre: ${opinion.nombre}</p>
-                            <p> Reseña: ${opinion.mensaje}</p>
-                        </div>
-                        `;
-        datosReseña.appendChild(div);
-    })
-}
+

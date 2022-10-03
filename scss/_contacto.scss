@@ -50,6 +50,10 @@
 }
 .reseñas{
     display: flex;
+    justify-content: center;
+    &__inf{
+        height: 70px;
+    }
     &__btn{
         border-radius: 15px;
         height: 40px;
@@ -57,9 +61,5 @@
         background-color: $color-secundario;
         border-color: $color-secundario;
         color: white;
-    }
-    &__muestra{
-        height: 200px;
-
     }
 }
