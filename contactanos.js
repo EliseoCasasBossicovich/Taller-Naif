@@ -40,36 +40,28 @@ function agregarReseña(){
     const mensaje = document.getElementById("comentario").value;
     const nuevaReseña = new Opinion(nombre, mensaje);
     arrayOpiniones.push(nuevaReseña);
-    localStorage.setItem(Opinion, JSON.stringify(arrayOpiniones)); 
+    localStorage.setItem("reseñasOp", JSON.stringify(arrayOpiniones)); 
     idOpinion.reset();
 }
 const verReseña = document.getElementById("listaReseñas");
 const datosReseña = document.getElementById("datosReseña");
 
-// verReseña.addEventListener("click", () =>{
-//     const nuevaReseña = JSON.parse(localStorage.getItem("Opinion"));
-//     let aux ="";
-//     nuevaReseña.forEach(opinion => {
-//         aux += `<p class="reseña__inf"> Nombre: ${opinion.nombre}</p>
-//                 <p class="reseña__inf"> Reseña: ${opinion.mensaje}</p>
-//                 `;
-        
-//     })
-//     datosReseña.innerHTML = aux; 
-// })
-verReseña.addEventListener("click", () =>{
-    if(localStorage.getItem("Opinion")){
-        let nuevaReseña = JSON.parse(localStorage.getItem("Opinion"));
-        let aux ="";
-        nuevaReseña.forEach(opinion => {
-            aux += `<p class="reseña__inf"> Nombre: ${opinion.nombre}</p>
-                    <p class="reseña__inf"> Reseña: ${opinion.mensaje}</p>
-                    `;
-        })
-        datosReseña.innerHTML = aux; 
-    }
-})
 
-// const nuevaReseña = localStorage.getItem("Opinion") ? 
-//     JSON.parse(localStorage.getItem("Opinion")):
-//     [];
+
+
+const nuevaReseña = localStorage.getItem("reseñasOp") ? 
+    JSON.parse(localStorage.getItem("reseñasOp")):
+    [];
+
+verReseña.addEventListener("click", () =>{
+    const nuevaReseña = JSON.parse(localStorage.getItem("reseñasOp"));
+    let aux ="";
+    nuevaReseña.forEach(opinion => {
+        aux += `<p class="reseña__inf"> Nombre: ${opinion.nombre}</p>
+                <p class="reseña__inf"> Reseña: ${opinion.mensaje}</p>
+                `;
+                datosReseña.innerHTML = aux; 
+        
+    })
+    
+})
