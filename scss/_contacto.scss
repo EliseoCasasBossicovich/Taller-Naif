@@ -50,9 +50,13 @@
 }
 .reseñas{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin: 16px;
     &__inf{
         height: 70px;
+        margin-bottom: 16px;
+        
     }
     &__btn{
         border-radius: 15px;
@@ -61,5 +65,13 @@
         background-color: $color-secundario;
         border-color: $color-secundario;
         color: white;
+    }
+}
+.listado{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    &__reseñas{
+        height: 70px;
     }
 }

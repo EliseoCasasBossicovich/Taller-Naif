@@ -58,9 +58,12 @@
 
 .reseñas {
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px; }
   .reseñas__inf {
-    height: 70px; }
+    height: 70px;
+    margin-bottom: 16px; }
   .reseñas__btn {
     border-radius: 15px;
     height: 40px;
@@ -68,6 +71,13 @@
     background-color: #b0305a;
     border-color: #b0305a;
     color: white; }
+
+.listado {
+  display: flex;
+  flex-direction: column;
+  height: auto; }
+  .listado__reseñas {
+    height: 70px; }
 
 .color-footer {
   background-color: #b90440; }
@@ -195,3 +205,6 @@ img {
   padding: 10px;
   width: 100%;
   height: 100%; }
+
+.toastDis {
+  background: linear-gradient(#b0305a, #ff2c4f); }

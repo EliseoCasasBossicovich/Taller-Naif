@@ -33,7 +33,15 @@ const idOpinion = document.getElementById("reseña");
 
 idOpinion.addEventListener("submit", (e) =>{
     e.preventDefault();
-    agregarReseña();   
+    agregarReseña();
+    Toastify( {
+        text: "Opinion enviada con exito. Gracias!",
+        duration: 2000,
+        position: "right",
+        gravity: "bottom",
+        className: "toastDis",
+
+    }).showToast();   
 })
 function agregarReseña(){
     const nombre = document.getElementById("sujeto").value;
@@ -47,21 +55,19 @@ const verReseña = document.getElementById("listaReseñas");
 const datosReseña = document.getElementById("datosReseña");
 
 
-
-
-const nuevaReseña = localStorage.getItem("reseñasOp") ? 
+verReseña.addEventListener("click", () =>{
+    const nuevaReseña = localStorage.getItem("reseñasOp") ? 
     JSON.parse(localStorage.getItem("reseñasOp")):
     [];
-
-verReseña.addEventListener("click", () =>{
-    const nuevaReseña = JSON.parse(localStorage.getItem("reseñasOp"));
     let aux ="";
-    nuevaReseña.forEach(opinion => {
-        aux += `<p class="reseña__inf"> Nombre: ${opinion.nombre}</p>
-                <p class="reseña__inf"> Reseña: ${opinion.mensaje}</p>
+    nuevaReseña.forEach(nuevaReseña => {
+        aux += `<div class="reseñas__listado--reseña">
+                <p> Nombre: ${nuevaReseña.nombre}</p>
+                <p> Reseña: ${nuevaReseña.mensaje}</p>
+                </div>
+                <hr>
                 `;
-                datosReseña.innerHTML = aux; 
-        
     })
-    
+    datosReseña.innerHTML = aux; 
+
 })
