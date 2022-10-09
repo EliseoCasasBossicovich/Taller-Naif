@@ -9,12 +9,24 @@ class Integrante {
         this.imagen3 = imagen3;
     }
 }
-const integrante1 = new Integrante ("Patricia A. Bossicovich", "Frase1",src = "recursos/historia.jpg", src = "recursos/historia.jpg", src = "recursos/historia.jpg");
-const integrante2 = new Integrante ("Bibiana Bossicovich", "Frase2", src = "recursos/historia.jpg", src = "recursos/historia.jpg", src = "recursos/historia.jpg");
-const integrante3 = new Integrante ("Gabriela Ulivieri","Frase3", src = "recursos/historia.jpg", src = "recursos/historia.jpg", src = "recursos/historia.jpg");
-const integrante4 = new Integrante ("Karen Liljesthron", "Frase4", src = "recursos/historia.jpg", src = "recursos/historia.jpg", src = "recursos/historia.jpg");
-const integrante5 = new Integrante ("Gabriela De Dominicis", "Frase5", src = "recursos/historia.jpg", src = "recursos/historia.jpg", src = "recursos/historia.jpg");
-const integrante6 = new Integrante (" Ingrid Malanot","Frase6", src = "recursos/historia.jpg", src = "recursos/historia.jpg",src = "recursos/historia.jpg");
+const integrante1 = new Integrante ("Patricia A. Bossicovich", 
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant",
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg", src = "../recursos/historia.jpg");
+const integrante2 = new Integrante ("Bibiana Bossicovich", 
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg", src = "../recursos/historia.jpg");
+const integrante3 = new Integrante ("Gabriela Ulivieri",
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg", src = "../recursos/historia.jpg");
+const integrante4 = new Integrante ("Karen Liljesthron", 
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg", src = "../recursos/historia.jpg");
+const integrante5 = new Integrante ("Gabriela De Dominicis", 
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg", src = "../recursos/historia.jpg");
+const integrante6 = new Integrante (" Ingrid Malanot",
+                                    "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
+                                    src = "../recursos/historia.jpg", src = "../recursos/historia.jpg",src = "../recursos/historia.jpg");
 
 // Arrays
 // Integrantes
@@ -29,13 +41,13 @@ integrantes.push(integrante6);
 console.log(integrantes)
 
 // Armado de pagina
-const verIntegrantes = document.getElementById("verIntegrantes");ç
+const verIntegrantes = document.getElementById("verIntegrantes");
 
-integrantes.forEach( Integrantes => {
+integrantes.forEach( Integrantes=> {
     let article = document.createElement("article");
     article.innerHTML = `<div class="verIntegrantes__imagen">
                             <img src="${Integrantes.imagen1}" class="verIntegrantes__img">
-                        </div>
+                        </div> 
                         <div class="verIntegrantes__bio">
                             <span class="">${Integrantes.nombre}</span>
                             <p class="verIntegrantes">${Integrantes.frese}</p>
@@ -43,7 +55,7 @@ integrantes.forEach( Integrantes => {
                         <div>
                             <img src="${Integrantes.imagen2}" class="verIntegrantes__img--cuadro">
                             <img src="${Integrantes.imagen3}" class="verIntegrantes__img--cuadro">
-                        </div>`
+                        </div> <hr>`
     verIntegrantes.appendChild(article);
 })
 

@@ -58,11 +58,11 @@ const datosReseña = document.getElementById("datosReseña");
 verReseña.addEventListener("click", () =>{
     const nuevaReseña = localStorage.getItem("reseñasOp") ? 
     JSON.parse(localStorage.getItem("reseñasOp")):
-    [];
+    elementosVacios();
     let aux ="";
     nuevaReseña.forEach(nuevaReseña => {
         aux += `<div class="reseñas__listado--reseña">
-                <p> Nombre: ${nuevaReseña.nombre}</p>
+                <p> Nombre: ${nuevaReseña .nombre}</p>
                 <p> Reseña: ${nuevaReseña.mensaje}</p>
                 </div>
                 <hr>
@@ -71,3 +71,14 @@ verReseña.addEventListener("click", () =>{
     datosReseña.innerHTML = aux; 
 
 })
+
+function elementosVacios(){
+    Toastify( {
+        text: "No hay reseñas, dejanos una!",
+        duration: 2000,
+        position: "right",
+        gravity: "bottom",
+        className: "toastDis",
+
+    }).showToast();   
+}
