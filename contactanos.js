@@ -56,14 +56,14 @@ const datosReseña = document.getElementById("datosReseña");
 
 
 verReseña.addEventListener("click", () =>{
-    const nuevaReseña = localStorage.getItem("reseñasOp") ? 
+    const Reseñas = localStorage.getItem("reseñasOp") ? 
     JSON.parse(localStorage.getItem("reseñasOp")):
     elementosVacios();
     let aux ="";
-    nuevaReseña.forEach(nuevaReseña => {
+    Reseñas.forEach(reseñasOp => {
         aux += `<div class="reseñas__listado--reseña">
-                <p> Nombre: ${nuevaReseña .nombre}</p>
-                <p> Reseña: ${nuevaReseña.mensaje}</p>
+                <p> Nombre: ${reseñasOp.nombre}</p>
+                <p> Reseña: ${reseñasOp.mensaje}</p>
                 </div>
                 <hr>
                 `;
