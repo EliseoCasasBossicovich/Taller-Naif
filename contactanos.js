@@ -56,7 +56,8 @@ const datosReseña = document.getElementById("datosReseña");
 
 
 verReseña.addEventListener("click", () =>{
-    const reseñas = JSON.parse(localStorage.getItem("reseñasOp"));
+    const reseñas = localStorage.getItem("reseñasOp") ? 
+    JSON.parse(localStorage.getItem("reseñasOp")) : elementosVacios()
     datosReseña.innerHTML = "";
     reseñas.forEach(reseñaop => {
         const div = document.createElement("div");
@@ -70,13 +71,14 @@ verReseña.addEventListener("click", () =>{
     });
 })
 
-// function elementosVacios(){
-//     Toastify( {
-//         text: "No hay reseñas, dejanos una!",
-//         duration: 2000,
-//         position: "right",
-//         gravity: "bottom",
-//         className: "toastDis",
-
-//     }).showToast();   
-// }
+function elementosVacios(){
+    setTimeout( () => {   
+        Toastify( {
+        text: "No hay reseñas, dejanos una!",
+        duration: 2000,
+        position: "right",
+        gravity: "bottom",
+        className: "toastDis",
+        }).showToast()
+    }, 1000) 
+}

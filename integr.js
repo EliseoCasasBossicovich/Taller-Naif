@@ -15,7 +15,7 @@ const integrante2 = {
     frase2: "'La belleza artística no consiste en representar una cosa bella, sino en la bella representación de una cosa.' Immanuel Kant", 
     fotoPerfil2: src = "../recursos/historia.jpg", 
     imagenes2:{
-        imagen3: src = "../recursos/cuadros/bbossicovich1.jpg",
+        imagen3: src = "../recursos/cuadros/bbossicovich3.jpg",
         imagen4: src = "../recursos/cuadros/bbossicovich2.jpg"
     }
 };
@@ -58,7 +58,6 @@ const {nombre5, frase5, fotoPerfil5, imagenes5: {imagen9, imagen10}} = integrant
 // Arrays
 // Integrantes
 const integrantes = [];
-
 integrantes.push(integrante1);
 integrantes.push(integrante2);
 integrantes.push(integrante3);
@@ -78,23 +77,86 @@ cuadros.push(imagen8);
 cuadros.push(imagen9);
 cuadros.push(imagen10);
 console.log(cuadros);
+// Obras
+const obra1 = {src:"recursos/cuadros/toto2.jpg"};
+const obra2 = {src:"recursos/cuadros/dominicis3.jpg"};
+const obra3 = {src:"recursos/cuadros/pbossicovich5.jpg"};
+const obra4 = {src:"recursos/cuadros/mendez4.jpg"};
+const obra5 = {src:"recursos/cuadros/liljesthrom5.jpg"};
+const obra6 = {src:"recursos/cuadros/chemes3.jpg"};
+const obra7 = {src:"recursos/cuadros/bbossicovich1.jpg"};
+const obra8 = {src:"recursos/cuadros/ulivieri5.jpg"};
+const obra9 = {src:"recursos/cuadros/reyes3.jpg"};
+const obra10 = {src:"recursos/cuadros/maris4.jpg"};
+const obras = [obra1, obra2, obra3, obra4, obra5, obra6, obra7, obra8, obra9, obra10];
+// Uniendo dos arrays con spread
+const coleccion = [...obras, ...cuadros];
 
 // Armado de pagina
-const verIntegrantes = document.getElementById("verIntegrantes");
-
-integrantes.forEach( Integrantes=> {
-    let article = document.createElement("article");
-    article.innerHTML = `<div class="verIntegrantes__imagen">
-                            <img src="${Integrantes.imagen}" class="verIntegrantes__img">
-                        </div> 
-                        <div class="verIntegrantes__bio">
-                            <span class="">${Integrantes.nombre}</span>
-                            <p class="verIntegrantes">${Integrantes.frese}</p>
-                        </div>
-                        <div>
-                            <img src="${Integrantes.imagen2}" class="verIntegrantes__img--cuadro">
-                            <img src="${Integrantes.imagen3}" class="verIntegrantes__img--cuadro">
-                        </div> <hr>`
-    verIntegrantes.appendChild(article);
-})
+const verIntegrantes = document.getElementById('verIntegrantes');
+    verIntegrantes.innerHTML = `<article>
+                                    <div class="verIntegrantes__imagen">
+                                    <img src="${fotoPerfil1}" class="verIntegrantes__img">
+                                    </div>
+                                    <div class="verIntegrantes__bio">
+                                        <span class="">${nombre1}</span>
+                                        <p class="verIntegrantes">${frase1}</p>
+                                    </div>
+                                    <div>
+                                        <img src="${imagen1}" class="verIntegrantes__img--cuadro">
+                                        <img src="${imagen2}" class="verIntegrantes__img--cuadro">
+                                    </div> 
+                                </article> <hr>
+                                <article>
+                                    <div class="verIntegrantes__imagen">
+                                    <img src="${fotoPerfil2}" class="verIntegrantes__img">
+                                    </div>
+                                    <div class="verIntegrantes__bio">
+                                        <span class="">${nombre2}</span>
+                                        <p class="verIntegrantes">${frase2}</p>
+                                    </div>
+                                    <div>
+                                        <img src="${imagen3}" class="verIntegrantes__img--cuadro">
+                                        <img src="${imagen4}" class="verIntegrantes__img--cuadro">
+                                    </div> 
+                                </article> <hr>
+                                <article>
+                                    <div class="verIntegrantes__imagen">
+                                    <img src="${fotoPerfil3}" class="verIntegrantes__img">
+                                    </div>
+                                    <div class="verIntegrantes__bio">
+                                        <span class="">${nombre3}</span>
+                                        <p class="verIntegrantes">${frase3}</p>
+                                    </div>
+                                    <div>
+                                        <img src="${imagen5}" class="verIntegrantes__img--cuadro">
+                                        <img src="${imagen6}" class="verIntegrantes__img--cuadro">
+                                    </div> 
+                                </article> <hr>
+                                <article>
+                                    <div class="verIntegrantes__imagen">
+                                    <img src="${fotoPerfil4}" class="verIntegrantes__img">
+                                    </div>
+                                    <div class="verIntegrantes__bio">
+                                        <span class="">${nombre4}</span>
+                                        <p class="verIntegrantes">${frase4}</p>
+                                    </div>
+                                    <div>
+                                        <img src="${imagen7}" class="verIntegrantes__img--cuadro">
+                                        <img src="${imagen8}" class="verIntegrantes__img--cuadro">
+                                    </div> 
+                                </article> <hr>
+                                <article>
+                                    <div class="verIntegrantes__imagen">
+                                    <img src="${fotoPerfil5}" class="verIntegrantes__img">
+                                    </div>
+                                    <div class="verIntegrantes__bio">
+                                        <span class="">${nombre5}</span>
+                                        <p class="verIntegrantes">${frase5}</p>
+                                    </div>
+                                    <div>
+                                        <img src="${imagen9}" class="verIntegrantes__img--cuadro">
+                                        <img src="${imagen10}" class="verIntegrantes__img--cuadro">
+                                    </div> 
+                                </article> <hr>`
 
