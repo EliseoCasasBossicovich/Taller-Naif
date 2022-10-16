@@ -92,6 +92,17 @@ const obras = [obra1, obra2, obra3, obra4, obra5, obra6, obra7, obra8, obra9, ob
 // Uniendo dos arrays con spread
 const coleccion = [...obras, ...cuadros];
 
+// Galeria cuadros
+
+const galeriaCuadros = "https://jsonplaceholder.typicode.com/photos";
+const contenedorGaleria = document.getElementById("contenedorGaleria");
+fetch(galeriaCuadros)
+    .then(imagenes => imagenes.json())
+    .then((articulos) => {
+        
+    })
+    // .catch(error = ...)
+
 // Armado de pagina
 const verIntegrantes = document.getElementById('verIntegrantes');
     verIntegrantes.innerHTML = `<article>
