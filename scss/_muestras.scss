@@ -1,0 +1,14 @@
+.galeria{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin: auto;
+justify-content: center;
+    &__img{
+        width: 15vw;
+        height: auto;
+    }
+    &__titulo{
+        margin: 16px;
+    }
+}

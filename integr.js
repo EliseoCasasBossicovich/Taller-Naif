@@ -93,15 +93,17 @@ const obras = [obra1, obra2, obra3, obra4, obra5, obra6, obra7, obra8, obra9, ob
 const coleccion = [...obras, ...cuadros];
 
 // Galeria cuadros
-
-const galeriaCuadros = "https://jsonplaceholder.typicode.com/photos";
 const contenedorGaleria = document.getElementById("contenedorGaleria");
+const galeriaCuadros = "../json/cuadros.json";
 fetch(galeriaCuadros)
-    .then(imagenes => imagenes.json())
-    .then((articulos) => {
-        
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach(cuadro => {
+            contenedorGaleria.innerHTML += `<img class="galeria__img" src=${cuadro.obra}>`
+        });
     })
-    // .catch(error = ...)
+    .catch(error => console.log(error))
+    .finally(() => console.log("Fin del proceso"));
 
 // Armado de pagina
 const verIntegrantes = document.getElementById('verIntegrantes');

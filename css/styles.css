@@ -152,6 +152,27 @@
   background-position: top;
   background-image: url("../recursos/contactanos.jpg"); }
 
+.galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center; }
+  .galeria__img {
+    width: 15vw;
+    height: auto; }
+  .galeria__titulo {
+    margin: 16px; }
+
+.header {
+  background-color: #b90440; }
+  .header__ul:hover {
+    transform: scale(1.05, 1.05); }
+  .header__ul__li {
+    padding-left: 20px;
+    padding-bottom: 0.75rem;
+    font-size: 1.2em; }
+
 .footer__contactanos {
   display: grid;
   grid-template-areas: "indice mapa redes" "indice mapa derechos";
